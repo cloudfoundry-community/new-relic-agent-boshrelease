@@ -1,0 +1,8 @@
+---
+name: agent-installer
+
+dependencies: []
+
+files: 
+- NewRelicDotNetAgent_x64.msi # From https://download.newrelic.com/dot_net_agent/latest_release/
+

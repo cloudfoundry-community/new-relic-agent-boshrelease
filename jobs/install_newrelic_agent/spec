@@ -1,8 +1,10 @@
 ---
 name: install_newrelic_agent
 
-files:
-- NewRelicDotNetAgent_x64.msi # From https://download.newrelic.com/dot_net_agent/latest_release/
+files: []
+
+packages:
+- agent-installer
 
 templates:
   pre-start.ps.erb: bin/pre-start

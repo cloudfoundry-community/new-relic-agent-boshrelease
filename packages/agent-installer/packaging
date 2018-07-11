@@ -1,0 +1,3 @@
+$src=(Get-ChildItem "NewRelicDotNetAgent_x64.msi").FullName
+$dest = (Join-Path $env:BOSH_INSTALL_TARGET "NewRelicDotNetAgent_x64.msi")
+cp $src $dest
