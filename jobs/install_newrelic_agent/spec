@@ -1,0 +1,5 @@
+---
+name: install_newrelic_agent
+
+templates:
+  pre-start.ps.erb: bin/pre-start
