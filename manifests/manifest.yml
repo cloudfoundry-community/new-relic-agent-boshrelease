@@ -1,0 +1,30 @@
+name: new-relic-agent-boshrelease
+
+releases:
+- name: new-relic-agent-boshrelease
+  version: latest
+
+stemcells:
+- alias: default
+  version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 10
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
+
+instance_groups:
+- name: new-relic
+  instances: 1
+  azs: [z1, z2]
+  jobs:
+  - name: install_newrelic_agent
+    release: new-relic-agent-boshrelease
+  vm_type: default
+  stemcell: default
+  persistent_disk_type: default
+  networks:
+  - name: default
+
+addons: []
